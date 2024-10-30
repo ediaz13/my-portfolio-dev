@@ -1,3 +1,4 @@
+// @ts-check
 import { defineConfig } from 'astro/config'
 import { URL } from './src/data/constants'
 
@@ -11,11 +12,6 @@ import compressor from 'astro-compressor'
 
 // https://astro.build/config
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@config': path.resolve(__dirname, 'src/config')
-    }
-  },
   site: URL,
   server: {
     host: true
